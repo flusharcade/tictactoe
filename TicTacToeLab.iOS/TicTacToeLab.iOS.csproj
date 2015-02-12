@@ -248,6 +248,9 @@
     <Reference Include="Cirrious.MvvmCross.Plugins.All">
       <HintPath>..\packages\MvvmCross.HotTuna.Plugin.All.3.5.0\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.All.dll</HintPath>
     </Reference>
+    <Reference Include="MBProgressHUD">
+      <HintPath>..\Components\mbprogresshud-0.9.0.1\lib\ios-unified\MBProgressHUD.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
@@ -314,6 +317,9 @@
     <Folder Include="Web\" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\m.png" />
+    <XamarinComponentReference Include="mbprogresshud">
+      <Version>0.9.0.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
   </ItemGroup>
 </Project>

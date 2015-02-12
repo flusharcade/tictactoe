@@ -17,12 +17,14 @@ namespace TicTacToeLab.iOS
 		{
 			base.FillValueConverters (registry);
 			registry.AddOrOverwrite("ByteToUIImageConverter", new ByteToUIImageConverter());
-
 		}
 
 		protected override IMvxApplication CreateApp()
 		{
 			App.Downloader = new FileDownloader ();
+			App.Storage = new ImgStorage ();
+			App.Storage.LoadImgs ();
+			
 			return new TicTacToeLab.App();
 		}
 		

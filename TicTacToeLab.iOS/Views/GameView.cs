@@ -8,6 +8,7 @@ using ObjCRuntime;
 using UIKit;
 
 using TicTacToeLab.ViewModels;
+using MBProgressHUD;
 
 namespace TicTacToeLab.iOS.Views
 {
@@ -15,6 +16,8 @@ namespace TicTacToeLab.iOS.Views
     public class GameView : MvxViewController
     {
 		private UICollectionView PlayView;
+
+		GameViewModel model;
 
         public override void ViewDidLoad()
         {
@@ -36,16 +39,21 @@ namespace TicTacToeLab.iOS.Views
 				TranslatesAutoresizingMaskIntoConstraints = false,
 				TextAlignment = UITextAlignment.Center
 			};
+
+			var hud = new MTMBProgressHUD (View) {
+				LabelText = "Downloading Images...",
+				RemoveFromSuperViewOnHide = true
+			};
 					
 			View.AddSubview (PlayView);
 			View.AddSubview (turnLabel);
+			View.AddSubview (hud);
 
 			View.AddConstraints (NSLayoutConstraint.FromVisualFormat ("V:|[PlayView]-20-[turnLabel(==50)]|", NSLayoutFormatOptions.AlignAllCenterX, null, new NSDictionary ("PlayView", PlayView, "turnLabel", turnLabel)));
 			View.AddConstraints (NSLayoutConstraint.FromVisualFormat ("H:|[PlayView]|", NSLayoutFormatOptions.AlignAllCenterY, null, new NSDictionary ("PlayView", PlayView)));
 			View.AddConstraints (NSLayoutConstraint.FromVisualFormat ("H:|[turnLabel]|", NSLayoutFormatOptions.AlignAllCenterY, null, new NSDictionary ("turnLabel", turnLabel)));
 
 			var source = new CollectionSource (PlayView, XOCell.Key);
-
 			PlayView.RegisterNibForCell(XOCell.Nib, XOCell.Key);
 			PlayView.Source = source;
 			PlayView.ReloadData();
@@ -55,6 +63,12 @@ namespace TicTacToeLab.iOS.Views
 			set.Bind(source).To(vm => vm.XOItems);
 			set.Bind(source).For(s => s.SelectionCommand).To (vm => vm.SelectionCommand); 
             set.Apply();
+
+			model = (GameViewModel)this.DataContext;
+			model.LoadedImages += (sender, e) => hud.Hide (animated: true, delay: 0);
+
+			if (!App.Storage.ImagesLoaded)
+				hud.Show (animated: true);
         }
     }
 }

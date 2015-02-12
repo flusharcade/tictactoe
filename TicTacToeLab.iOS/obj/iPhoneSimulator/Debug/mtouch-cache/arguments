@@ -125,6 +125,8 @@
 	-r \
 	../packages/MvvmCross.HotTuna.Plugin.All.3.5.0/lib/Xamarin.iOS10/Cirrious.MvvmCross.Plugins.All.dll \
 	-r \
+	../Components/mbprogresshud-0.9.0.1/lib/ios-unified/MBProgressHUD.dll \
+	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
 	/Users/mww121/Projects/TicTacToeLab/TicTacToeLab/bin/Debug//TicTacToeLab.dll \
@@ -318,6 +320,8 @@
 	../packages/MvvmCross.HotTuna.Plugin.WebBrowser.3.5.0/lib/Xamarin.iOS10/Cirrious.MvvmCross.Plugins.WebBrowser.Touch.dll \
 	-r \
 	../packages/MvvmCross.HotTuna.Plugin.All.3.5.0/lib/Xamarin.iOS10/Cirrious.MvvmCross.Plugins.All.dll \
+	-r \
+	../Components/mbprogresshud-0.9.0.1/lib/ios-unified/MBProgressHUD.dll \
 	-r \
 	/Users/mww121/Projects/TicTacToeLab/TicTacToeLab/bin/Debug//TicTacToeLab.dll \
 	/Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/bin/iPhoneSimulator/Debug//TicTacToeLab.iOS.exe \

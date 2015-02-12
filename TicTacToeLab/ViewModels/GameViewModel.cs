@@ -9,7 +9,14 @@ namespace TicTacToeLab.ViewModels
     {
 		const int GRID_SIZE = 9;
 
-		public static ImgStorage ImgStorage;
+		public event EventHandler LoadedImages;
+
+		private XOType playerTurn;
+		public XOType PlayerTurn
+		{ 
+			get { return playerTurn; }
+			set { playerTurn = value; RaisePropertyChanged(() => PlayerTurn); }
+		}
 
 		private XOType playerType;
 		public XOType PlayerType
@@ -31,7 +38,7 @@ namespace TicTacToeLab.ViewModels
 			get { return xOItems; }
 			set { xOItems = value; RaisePropertyChanged(() => xOItems); }
 		}
-
+			
 		// command definition
 		public MvxCommand<XOItemModel> SelectionCommand
 		{
@@ -40,14 +47,21 @@ namespace TicTacToeLab.ViewModels
 
 		public void SelectionCommandAction(XOItemModel item)
 		{
+			PlayerTurn = (PlayerTurn == XOType.O) ? XOType.X : XOType.O;
+
 			if (item.LoadCommand != null)
-				item.LoadCommand.Execute(ImgStorage.OImage);
+				item.LoadCommand.Execute(App.Storage.OImage);
+		}
+
+		private void NotifyImagesLoaded()
+		{
+			if (LoadedImages != null)
+				LoadedImages(this, EventArgs.Empty);
 		}
 
 		public void Init(DetailParameters parameters)
 		{
-			ImgStorage = new ImgStorage ();
-			ImgStorage.LoadImgs ();
+			App.Storage.Loaded += (sender, e) => NotifyImagesLoaded ();
 
 			// init
 			PlayerType = parameters.PlayerType;

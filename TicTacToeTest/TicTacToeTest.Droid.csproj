@@ -63,16 +63,154 @@
     <Reference Include="Cirrious.MvvmCross">
       <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.dll</HintPath>
     </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Accelerometer">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Accelerometer.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Accelerometer.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Accelerometer.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Accelerometer.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Accelerometer.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Bookmarks">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Bookmarks.3.5.0\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.MvvmCross.Plugins.Bookmarks.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Color">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Color.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Color.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Color.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Color.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Color.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.DownloadCache">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.DownloadCache.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.DownloadCache.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.DownloadCache.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.DownloadCache.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.DownloadCache.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Email">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Email.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Email.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Email.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Email.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Email.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.File">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.File.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.File.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.File.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.File.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.File.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\portable-net40+sl5+wp80+win8+monotouch+monoandroid\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Json">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.JsonLocalisation">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.JsonLocalisation.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.JsonLocalisation.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Location">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Location.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Location.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Location.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Location.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Location.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Messenger">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Messenger.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Network">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Network.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Network.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Network.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Network.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.PhoneCall">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.PhoneCall.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.PhoneCall.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.PhoneCall.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.PhoneCall.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.PhoneCall.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.PictureChooser">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.PictureChooser.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.PictureChooser.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.PictureChooser.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.PictureChooser.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.PictureChooser.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.ReflectionEx">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.ReflectionEx.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.ReflectionEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.ReflectionEx.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.ReflectionEx.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.ReflectionEx.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.ResourceLoader">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.ResourceLoader.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.ResourceLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.ResourceLoader.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.ResourceLoader.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.ResourceLoader.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Share">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Share.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Share.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Share.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Share.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Share.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.SoundEffects">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.SoundEffects.3.5.0\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.MvvmCross.Plugins.SoundEffects.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Sqlite">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Sqlite.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Sqlite.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Sqlite.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Sqlite.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.ThreadUtils">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.ThreadUtils.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.ThreadUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.ThreadUtils.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.ThreadUtils.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.ThreadUtils.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Visibility">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Visibility.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Visibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Visibility.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Visibility.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Visibility.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.WebBrowser">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.WebBrowser.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.WebBrowser.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.WebBrowser.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.WebBrowser.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.All">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.All.3.5.0\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.All.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\FirstView.cs" />
     <Compile Include="DebugTrace.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
+    <Compile Include="Web\FileDownloader.cs" />
+    <Compile Include="Views\GameView.cs" />
+    <Compile Include="Views\HomeView.cs" />
+    <Compile Include="Bootstrap\AccelerometerPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\EmailPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\JsonLocalisationPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\LocationPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\NetworkPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\PhoneCallPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\PictureChooserPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\ReflectionExPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\ResourceLoaderPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\SharePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\SqlitePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\ThreadUtilsPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\WebBrowserPluginBootstrap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -101,5 +239,8 @@
       <Project>{A42E87C5-EFFF-49D8-990C-7C927B513E0D}</Project>
       <Name>TicTacToeLab</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Web\" />
   </ItemGroup>
 </Project>

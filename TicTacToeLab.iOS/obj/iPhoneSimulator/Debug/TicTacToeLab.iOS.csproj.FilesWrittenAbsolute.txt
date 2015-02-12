@@ -63,3 +63,4 @@
 /Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/bin/iPhoneSimulator/Debug/TicTacToeLab.dll.mdb
 /Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/obj/iPhoneSimulator/Debug/background-ad.png
 /Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/obj/iPhoneSimulator/Debug/m.png
+/Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/bin/iPhoneSimulator/Debug/MBProgressHUD.dll

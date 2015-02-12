@@ -24,7 +24,7 @@ namespace TicTacToeLab.ViewModels
 		{
 			ShowViewModel<GameViewModel>(new DetailParameters () { 
 				PlayerType = XOType.X,
-				PlayerTitle = "X"
+				PlayerTitle = "X",
 			});
 		}
 
@@ -38,7 +38,7 @@ namespace TicTacToeLab.ViewModels
 		{
 			ShowViewModel<GameViewModel>(new DetailParameters () { 
 				PlayerType = XOType.O,
-				PlayerTitle = "O"
+				PlayerTitle = "O",
 			});
 		}
 
