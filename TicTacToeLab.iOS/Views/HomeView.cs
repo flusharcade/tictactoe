@@ -47,18 +47,7 @@ namespace TicTacToeLab.iOS.Views
 			set.Bind(xButton).To(vm => vm.xButtonCommand).WithConversion("CommandParameter", true);  
 			set.Bind(oButton).For("Title").To(vm => vm.OTitle);
 			set.Bind(oButton).To(vm => vm.oButtonCommand).WithConversion("CommandParameter", true);  
-		
             set.Apply();
         }
-
-		protected void HandleTouchUpInsideX (object sender, System.EventArgs e)
-		{
-			var button = sender as UIButton;
-			new UIAlertView (button.Title(UIControlState.Normal) + " click"
-				, "TouchUpInside Handled"
-				, null
-				, "OK"
-				, null).Show();
-		}
     }
 }

@@ -23,7 +23,7 @@ namespace TicTacToeLab.ViewModels
 		public void xButtonCommandAction(bool show)
 		{
 			ShowViewModel<GameViewModel>(new DetailParameters () { 
-				PlayerType = XOType.X,
+				PlayerTurn = XOType.X,
 				PlayerTitle = "X",
 			});
 		}
@@ -37,7 +37,7 @@ namespace TicTacToeLab.ViewModels
 		public void oButtonCommandAction(bool show)
 		{
 			ShowViewModel<GameViewModel>(new DetailParameters () { 
-				PlayerType = XOType.O,
+				PlayerTurn = XOType.O,
 				PlayerTitle = "O",
 			});
 		}

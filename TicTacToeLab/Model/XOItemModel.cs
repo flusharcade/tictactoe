@@ -8,12 +8,15 @@ namespace TicTacToeLab
 	public enum XOType
 	{
 		X,
-		O
+		O,
+		None
 	}
 
 	public class XOItemModel : MvxViewModel
 	{
-		private XOType type;
+		public int Index = 0;
+
+		private XOType type = XOType.None;
 		public XOType Type
 		{ 
 			get { return type; }

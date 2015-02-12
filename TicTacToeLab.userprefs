@@ -1,15 +1,33 @@
 ﻿<Properties StartupItem="TicTacToeLab.iOS/TicTacToeLab.iOS.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5.8.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TicTacToeLab.iOS/Views/GameView.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TicTacToeLab/ViewModels/GameViewModel.cs">
     <Files>
-      <File FileName="TicTacToeLab/ViewModels/GameViewModel.cs" Line="66" Column="66" />
-      <File FileName="TicTacToeLab/Model/XOItemModel.cs" Line="3" Column="3" />
-      <File FileName="TicTacToeLab.iOS/CollectionView/XOCell.cs" Line="46" Column="46" />
-      <File FileName="TicTacToeLab.iOS/Layout/GridLayout.cs" Line="3" Column="3" />
-      <File FileName="TicTacToeLab.iOS/CollectionView/CollectionSource.cs" Line="31" Column="31" />
-      <File FileName="TicTacToeLab.iOS/Views/GameView.cs" Line="29" Column="29" />
-      <File FileName="TicTacToeLab.iOS/Views/XOView.cs" Line="19" Column="19" />
+      <File FileName="TicTacToeLab/ViewModels/GameViewModel.cs" Line="1" Column="1" />
+      <File FileName="TicTacToeLab/Extensions/EnumerableExtensions.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="TicTacToeLab" expanded="True">
+            <Node name="Extensions" expanded="True" />
+            <Node name="Model" expanded="True" />
+            <Node name="Static" expanded="True" />
+            <Node name="Storage" expanded="True" />
+            <Node name="ViewModels" expanded="True">
+              <Node name="GameViewModel.cs" selected="True" />
+            </Node>
+            <Node name="Web" expanded="True" />
+          </Node>
+          <Node name="TicTacToeLab.iOS" expanded="True">
+            <Node name="Views" expanded="True" />
+          </Node>
+          <Node name="TicTacToeTest.Droid" expanded="True">
+            <Node name="Views" expanded="True" />
+            <Node name="Web" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

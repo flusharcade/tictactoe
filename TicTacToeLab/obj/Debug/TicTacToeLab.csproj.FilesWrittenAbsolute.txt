@@ -20,3 +20,7 @@
 /Users/mww121/Projects/TicTacToeLab/TicTacToeLab/bin/Debug/System.Text.RegularExpressions.dll
 /Users/mww121/Projects/TicTacToeLab/TicTacToeLab/bin/Debug/MvvmCross.Plugins.Settings.dll
 /Users/mww121/Projects/TicTacToeLab/TicTacToeLab/bin/Debug/ModernHttpClient.dll
+/Users/mww121/Projects/TicTacToeLab/TicTacToeLab/bin/Debug/System.Reactive.Interfaces.dll
+/Users/mww121/Projects/TicTacToeLab/TicTacToeLab/bin/Debug/System.Reactive.Core.dll
+/Users/mww121/Projects/TicTacToeLab/TicTacToeLab/bin/Debug/System.Reactive.Linq.dll
+/Users/mww121/Projects/TicTacToeLab/TicTacToeLab/bin/Debug/System.Reactive.PlatformServices.dll

@@ -6,7 +6,7 @@ namespace TicTacToeLab
 {
 	public class DetailParameters
 	{
-		public XOType PlayerType { get; set; }
+		public XOType PlayerTurn { get; set; }
 
 		public string PlayerTitle { get; set; }
 

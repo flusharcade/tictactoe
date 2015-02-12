@@ -16,6 +16,7 @@ namespace TicTacToeLab.iOS.Views
     public class GameView : MvxViewController
     {
 		private UICollectionView PlayView;
+		private UILabel turnLabel;
 
 		GameViewModel model;
 
@@ -35,7 +36,7 @@ namespace TicTacToeLab.iOS.Views
 				BackgroundColor = UIColor.Gray
 			};
 
-			var turnLabel = new UILabel () {
+			turnLabel = new UILabel () {
 				TranslatesAutoresizingMaskIntoConstraints = false,
 				TextAlignment = UITextAlignment.Center
 			};
@@ -66,9 +67,18 @@ namespace TicTacToeLab.iOS.Views
 
 			model = (GameViewModel)this.DataContext;
 			model.LoadedImages += (sender, e) => hud.Hide (animated: true, delay: 0);
+			model.EndResult += HandleEndResult;
 
 			if (!App.Storage.ImagesLoaded)
 				hud.Show (animated: true);
         }
+
+		protected void HandleEndResult (object sender, XOType e)
+		{
+			new UIAlertView ("Tic Tac Toe Lab", e.ToString() + " Wins"
+				, null
+				, "OK"
+				, null).Show();
+		}
     }
 }
