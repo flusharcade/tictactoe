@@ -4,9 +4,9 @@ System.Xml.dll
 System.Core.dll
 Mono.Dynamic.Interpreter.dll
 TicTacToeLab.dll
+System.Collections.dll
 System.Runtime.dll
 System.ComponentModel.Composition.dll
-System.Collections.dll
 Cirrious.MvvmCross.dll
 Cirrious.CrossCore.dll
 System.ObjectModel.dll
@@ -21,6 +21,13 @@ System.Linq.dll
 System.Threading.dll
 System.Threading.Tasks.dll
 System.Diagnostics.Debug.dll
+System.Reactive.Linq.dll
+System.Reactive.Core.dll
+System.Reactive.Interfaces.dll
+System.ComponentModel.dll
+System.Dynamic.Runtime.dll
+System.Diagnostics.Tools.dll
+System.Runtime.InteropServices.WindowsRuntime.dll
 Cirrious.MvvmCross.Touch.dll
 Cirrious.CrossCore.Touch.dll
 Cirrious.MvvmCross.Binding.dll
@@ -40,7 +47,6 @@ Cirrious.MvvmCross.Plugins.Email.dll
 Cirrious.MvvmCross.Plugins.Email.Touch.dll
 Cirrious.MvvmCross.Plugins.Json.dll
 Newtonsoft.Json.dll
-System.Dynamic.Runtime.dll
 System.Text.Encoding.dll
 System.Text.RegularExpressions.dll
 System.Xml.ReaderWriter.dll
@@ -49,7 +55,6 @@ System.Xml.Linq.dll
 System.Runtime.Serialization.Primitives.dll
 System.Runtime.Serialization.dll
 System.Text.Encoding.Extensions.dll
-System.Diagnostics.Tools.dll
 Microsoft.CSharp.dll
 Mono.CSharp.dll
 Cirrious.MvvmCross.Plugins.JsonLocalisation.dll

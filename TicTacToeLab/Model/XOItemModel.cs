@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+
 using Cirrious.MvvmCross.ViewModels;
+
+using TicTacToeLab.ViewModels;
 
 namespace TicTacToeLab
 {
@@ -15,6 +18,9 @@ namespace TicTacToeLab
 	public class XOItemModel : MvxViewModel
 	{
 		public int Index = 0;
+		public bool matched = false;
+
+		public GridPos Position;
 
 		private XOType type = XOType.None;
 		public XOType Type

@@ -67,18 +67,15 @@ namespace TicTacToeLab.iOS.Views
 
 			model = (GameViewModel)this.DataContext;
 			model.LoadedImages += (sender, e) => hud.Hide (animated: true, delay: 0);
-			model.EndResult += HandleEndResult;
+			model.End += HandleGameEnd;
 
 			if (!App.Storage.ImagesLoaded)
 				hud.Show (animated: true);
         }
 
-		protected void HandleEndResult (object sender, XOType e)
+		protected void HandleGameEnd (object sender, XOType e)
 		{
-			new UIAlertView ("Tic Tac Toe Lab", e.ToString() + " Wins"
-				, null
-				, "OK"
-				, null).Show();
+			InvokeOnMainThread (() => new UIAlertView ("Tic Tac Toe Lab", e.ToString () + " Wins", null, "OK", null).Show ());
 		}
     }
 }
