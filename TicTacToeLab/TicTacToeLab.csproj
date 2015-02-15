@@ -30,7 +30,6 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
@@ -39,13 +38,28 @@
     <Compile Include="Model\XOItemModel.cs" />
     <Compile Include="Static\Urls.cs" />
     <Compile Include="Storage\ImgStorage.cs" />
-    <Compile Include="Web\IFileDownloader.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Ioc\Bootstrapper.cs" />
+    <Compile Include="Ioc\GroupRegistration.cs" />
+    <Compile Include="Ioc\IDebug.cs" />
+    <Compile Include="Ioc\IModule.cs" />
+    <Compile Include="Ioc\IocBuilder.cs" />
+    <Compile Include="Ioc\IocContainer.cs" />
+    <Compile Include="Ioc\IResolver.cs" />
+    <Compile Include="Ioc\Registration.cs" />
+    <Compile Include="Ioc\Registration{T}.cs" />
+    <Compile Include="Ioc\RegistrationScope.cs" />
+    <Compile Include="Enums\RegisteredNames.cs" />
+    <Compile Include="Enums\BlobKeys.cs" />
+    <Compile Include="Interfaces\IFileDownloader.cs" />
+    <Compile Include="Interfaces\IAppState.cs" />
+    <Compile Include="Interfaces\IBlobRepository.cs" />
+    <Compile Include="Interfaces\IBlobStorable.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="ToDo-MvvmCross\_ Core.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">
@@ -75,12 +89,21 @@
     <Reference Include="System.Reactive.PlatformServices">
       <HintPath>..\packages\Rx-PlatformServices.2.2.5\lib\portable-windows8+net45+wp8\System.Reactive.PlatformServices.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.1.3.3.6323\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.1.3.3.6323\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
     <Folder Include="Static\" />
-    <Folder Include="Web\" />
     <Folder Include="Storage\" />
     <Folder Include="Extensions\" />
+    <Folder Include="Ioc\" />
+    <Folder Include="Enums\" />
+    <Folder Include="..\TicTacToeShared\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
 </Project>

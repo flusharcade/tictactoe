@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using Cirrious.CrossCore.Platform;
 
-namespace TicTacToeTest
+namespace TicTacToeLab.Droid
 {
     public class DebugTrace : IMvxTrace
     {

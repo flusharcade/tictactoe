@@ -10,6 +10,8 @@ namespace TicTacToeLab
 
 		public string PlayerTitle { get; set; }
 
+		public bool ResumeGame { get; set; }
+
 		public DetailParameters ()
 		{
 		}

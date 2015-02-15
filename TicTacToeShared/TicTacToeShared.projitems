@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{108BA4FD-C518-41E2-AB8A-80EF3DCF9C1D}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>TicTacToeShared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Sqlite\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Modules\" />
+    <Folder Include="$(MSBuildThisFileDirectory)AppState\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Web\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Sqlite\Blob.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sqlite\BlobFunctions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sqlite\BodyshopBlobKeys.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sqlite\SQLLite3BlobRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sqlite\SQLite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sqlite\SQLiteAsync.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modules\SharedModule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppState\AppState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppState\ApplicationSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Web\FileDownloader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\SetupService.cs" />
+  </ItemGroup>
+</Project>

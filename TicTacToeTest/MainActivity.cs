@@ -7,9 +7,9 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
-namespace TicTacToeTest
+namespace TicTacToeLab.Droid
 {
-	[Activity (Label = "TicTacToeTest", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "TicTacToeTest", Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
 		int count = 1;
@@ -19,15 +19,15 @@ namespace TicTacToeTest
 			base.OnCreate (bundle);
 
 			// Set our view from the "main" layout resource
-			SetContentView (Resource.Layout.Main);
+			//SetContentView (Resource.Layout.Main);
 
 			// Get our button from the layout resource,
 			// and attach an event to it
-			Button button = FindViewById<Button> (Resource.Id.myButton);
+			//Button button = FindViewById<Button> (Resource.Id.myButton);
 			
-			button.Click += delegate {
+			/*button.Click += delegate {
 				button.Text = string.Format ("{0} clicks!", count++);
-			};
+			};*/
 		}
 	}
 }

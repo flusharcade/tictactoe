@@ -18,6 +18,7 @@ namespace TicTacToeLab
 	public class XOItemModel : MvxViewModel
 	{
 		public int Index = 0;
+
 		public bool matched = false;
 
 		public GridPos Position;

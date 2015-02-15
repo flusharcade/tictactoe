@@ -15,30 +15,32 @@ namespace TicTacToeLab.ViewModels
 		}
 
 		// command definition
-		public MvxCommand<bool> xButtonCommand
+		public MvxCommand XButtonCommand
 		{
-			get { return new MvxCommand<bool>(xButtonCommandAction); }
+			get { return new MvxCommand(xButtonCommandAction); }
 		}
 
-		public void xButtonCommandAction(bool show)
+		private void xButtonCommandAction()
 		{
 			ShowViewModel<GameViewModel>(new DetailParameters () { 
 				PlayerTurn = XOType.X,
 				PlayerTitle = "X",
+				ResumeGame = false,
 			});
 		}
 
 		// command definition
-		public MvxCommand<bool> oButtonCommand
+		public MvxCommand OButtonCommand
 		{
-			get { return new MvxCommand<bool>(oButtonCommandAction); }
+			get { return new MvxCommand(oButtonCommandAction); }
 		}
 
-		public void oButtonCommandAction(bool show)
+		private void oButtonCommandAction()
 		{
 			ShowViewModel<GameViewModel>(new DetailParameters () { 
 				PlayerTurn = XOType.O,
 				PlayerTitle = "O",
+				ResumeGame = false,
 			});
 		}
 
@@ -47,6 +49,28 @@ namespace TicTacToeLab.ViewModels
 		{ 
 			get { return oTitle; }
 			set { oTitle = value; RaisePropertyChanged(() => OTitle); }
+		}
+
+		// command definition
+		public MvxCommand ResumeCommand
+		{
+			get { return new MvxCommand (resumeCommandAction); }
+		}
+
+		private void resumeCommandAction()
+		{
+			ShowViewModel<GameViewModel>(new DetailParameters () { 
+				PlayerTurn = XOType.O,
+				PlayerTitle = "O",
+				ResumeGame = true,
+			});
+		}
+
+		private string resumeTitle = "Resume";
+		public string ResumeTitle
+		{ 
+			get { return resumeTitle; }
+			set { resumeTitle = value; RaisePropertyChanged(() => resumeTitle); }
 		}
     }
 }

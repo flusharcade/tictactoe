@@ -1,9 +1,14 @@
 using Android.Content;
+
 using Cirrious.CrossCore.Platform;
 using Cirrious.MvvmCross.Droid.Platform;
 using Cirrious.MvvmCross.ViewModels;
+using Cirrious.CrossCore.Converters;
 
-namespace TicTacToeTest
+using TicTacToeLabShared.Services;
+using TicTacToeShared.Converters;
+
+namespace TicTacToeLab.Droid
 {
     public class Setup : MvxAndroidSetup
     {
@@ -11,9 +16,17 @@ namespace TicTacToeTest
         {
         }
 
+		protected override void FillValueConverters (IMvxValueConverterRegistry registry)
+		{
+			base.FillValueConverters (registry);
+			registry.AddOrOverwrite("ByteToUIImageConverter", new ByteToBitmapConverter());
+		}
+
         protected override IMvxApplication CreateApp()
         {
-            return new Core.App();
+			SetupService.Initialise ();
+
+			return new TicTacToeLab.App();
         }
 		
         protected override IMvxTrace CreateDebugTrace()

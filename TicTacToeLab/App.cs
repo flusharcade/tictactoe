@@ -1,6 +1,9 @@
+using System;
+
 using Cirrious.CrossCore.IoC;
 
 using TicTacToeLab.ViewModels;
+using TicTacToeLab.Interfaces;
 
 namespace TicTacToeLab
 {
@@ -8,6 +11,8 @@ namespace TicTacToeLab
     {
 		public static IFileDownloader Downloader;
 		public static ImgStorage Storage;
+		public static IAppState AppState;
+		public static IBlobRepository Datebase;
 
         public override void Initialize()
         {

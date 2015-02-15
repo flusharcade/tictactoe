@@ -4,9 +4,15 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+
 using Cirrious.CrossCore;
 using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross.Touch.Platform;
+
+using TicTacToeShared.State;
+using TicTacToeLab.Interfaces;
+
+using BodyshopWindows.Ioc;
 
 namespace TicTacToeLab.iOS
 {
@@ -30,17 +36,24 @@ namespace TicTacToeLab.iOS
 		{
 			// create a new window instance based on the screen size
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
-			
+
 			var setup = new Setup(this, window);
 			setup.Initialize();
 
 			var startup = Mvx.Resolve<IMvxAppStart>();
 			startup.Start();
-			
+
 			// make the window visible
 			window.MakeKeyAndVisible ();
 			
 			return true;
+		}
+
+		public override void DidEnterBackground (UIApplication application)
+		{
+			App.AppState.NotifyOnPaused ();
+
+			base.DidEnterBackground (application);
 		}
 	}
 }

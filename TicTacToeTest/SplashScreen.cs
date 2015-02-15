@@ -2,19 +2,13 @@ using Android.App;
 using Android.Content.PM;
 using Cirrious.MvvmCross.Droid.Views;
 
-namespace TicTacToeTest
+namespace TicTacToeLab.Droid
 {
-    [Activity(
-		Label = "TicTacToeTest"
-		, MainLauncher = true
-		, Icon = "@drawable/icon"
-		, Theme = "@style/Theme.Splash"
-		, NoHistory = true
-		, ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Label = "TicTacToeLab.Droid", MainLauncher = true, Icon = "@drawable/icon"
+		, Theme = "@style/Theme.Splash", NoHistory = true, ScreenOrientation = ScreenOrientation.Portrait)]
     public class SplashScreen : MvxSplashScreenActivity
     {
-        public SplashScreen()
-            : base(Resource.Layout.SplashScreen)
+        public SplashScreen() : base(Resource.Layout.SplashScreen)
         {
         }
     }

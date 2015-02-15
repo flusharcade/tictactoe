@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="TicTacToeLab.Droid">
+  <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="16" />
+  <application android:label="@string/app_name" android:name="mono.android.app.Application" android:debuggable="true">
+    <!-- Put your Google Maps V2 API Key here. This key will not work for you.-->
+    <!-- See https://developers.google.com/maps/documentation/android/start#obtaining_an_api_key -->
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBC_lFSWK3OoRfNZGrvTyYEIlAYDCXG9EM" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <activity android:name="com.google.android.gms.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:theme="@android:style/Theme.Translucent" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <activity android:icon="@drawable/icon" android:label="TicTacToeLab.Droid" android:noHistory="true" android:screenOrientation="portrait" android:theme="@style/Theme.Splash" android:name="tictactoelab.droid.SplashScreen">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="GameView" android:screenOrientation="portrait" android:name="tictactoelab.droid.GameView" />
+    <activity android:label="HomeView" android:screenOrientation="portrait" android:name="tictactoelab.droid.FirstView">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="TicTacToeLab.Droid.mono.MonoRuntimeProvider.__mono_init__" />
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.TicTacToeLab.Droid" />
+      </intent-filter>
+    </receiver>
+  </application>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+</manifest>

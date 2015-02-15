@@ -31,20 +31,5 @@ namespace TicTacToeLab.iOS
 			return (XOCell)Nib.Instantiate (null, null) [0];
 		}
 	}
-
-	public class ByteToUIImageConverter : IMvxValueConverter
-	{
-		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-		{
-			if (value == null)
-				return null;
-
-			return ImageFunctions.GetImagefromByteArray ((byte[])value);
-		}
-		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-		{
-			return ImageFunctions.ConvertUIImagetoByteArray((UIImage)value);
-		}
-	}
 }
 

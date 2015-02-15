@@ -58,9 +58,10 @@
 /Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/bin/iPhoneSimulator/Debug/Cirrious.MvvmCross.Plugins.Visibility.Touch.dll
 /Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/bin/iPhoneSimulator/Debug/Cirrious.MvvmCross.Plugins.WebBrowser.dll
 /Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/bin/iPhoneSimulator/Debug/Cirrious.MvvmCross.Plugins.WebBrowser.Touch.dll
-/Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/bin/iPhoneSimulator/Debug/Cirrious.MvvmCross.Plugins.All.dll
+/Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/bin/iPhoneSimulator/Debug/MBProgressHUD.dll
+/Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.iOS.dll
+/Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.dll
+/Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.dll
+/Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/bin/iPhoneSimulator/Debug/GoogleAdMobAds.dll
 /Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/bin/iPhoneSimulator/Debug/TicTacToeLab.dll
 /Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/bin/iPhoneSimulator/Debug/TicTacToeLab.dll.mdb
-/Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/obj/iPhoneSimulator/Debug/background-ad.png
-/Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/obj/iPhoneSimulator/Debug/m.png
-/Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/bin/iPhoneSimulator/Debug/MBProgressHUD.dll

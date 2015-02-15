@@ -5,7 +5,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToeLab", "TicTacToeLa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToeLab.iOS", "TicTacToeLab.iOS\TicTacToeLab.iOS.csproj", "{E351B9ED-AC5E-4787-997F-FBB5509FD963}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToeTest.Droid", "TicTacToeTest\TicTacToeTest.Droid.csproj", "{6B3362BC-740D-4531-B219-2877EFE65A46}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToeLab.Droid", "TicTacToeTest\TicTacToeLab.Droid.csproj", "{6B3362BC-740D-4531-B219-2877EFE65A46}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TicTacToeShared", "TicTacToeShared\TicTacToeShared.shproj", "{108BA4FD-C518-41E2-AB8A-80EF3DCF9C1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

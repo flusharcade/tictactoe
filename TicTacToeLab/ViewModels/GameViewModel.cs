@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Cirrious.MvvmCross.ViewModels;
 
 using System;
-using System.Reactive;
 using System.Linq;
 using System.Reactive.Linq;
 
@@ -30,19 +29,23 @@ namespace TicTacToeLab.ViewModels
 		private readonly List<GridPos> POSITIONS = new List<GridPos>(){ GridPos.TopLeft, GridPos.TopMiddle, GridPos.TopRight, GridPos.Left, GridPos.Middle, GridPos.Right, GridPos.BottomLeft, GridPos.BottomMiddle, GridPos.BottomRight};
 		private readonly IDictionary<GridPos, List<int>> checkDirections = new Dictionary<GridPos, List<int>> () {
 			{GridPos.TopLeft, new List<int>() {1, 4, 3}},
-			{GridPos.TopMiddle, new List<int>() {-1, 2, 3, 4, 1}},
+			{GridPos.TopMiddle, new List<int>() {3}},
 			{GridPos.TopRight, new List<int>() {-1, 2, 3}},
-			{GridPos.Left, new List<int>() {-3, -2, 1, 4, 3}},
-			{GridPos.Middle, new List<int>() {-4, -3, -2, -1, 1, 2, 3, 4}},
-			{GridPos.Right, new List<int>() {-3, -4, -1, 2, 3}},
+			{GridPos.Left, new List<int>() {1}},
+			{GridPos.Middle, new List<int>() {}}, // we never use this check as we want to start check of rows from left to right
+			{GridPos.Right, new List<int>() {-1}},
 			{GridPos.BottomLeft, new List<int>() {-3, -2, 1}},
-			{GridPos.BottomMiddle, new List<int>() {-1, -4, -3, -2, 1}},
+			{GridPos.BottomMiddle, new List<int>() {-3}},
 			{GridPos.BottomRight, new List<int>() {-1, -4, -3}},
 		};
-
+			
 		public event EventHandler LoadedImages;
 		public event EventHandler<XOType> WinDetected;
 		public event EventHandler<XOType> End;
+		public event EventHandler GameLoaded;
+
+		private bool Resume = false;
+		private bool GameEnded = false;
 
 		private XOType playerTurn;
 		public XOType PlayerTurn
@@ -107,13 +110,13 @@ namespace TicTacToeLab.ViewModels
 		private void checkForRows()
 		{
 			XOItems
-				.Where(x => x.Marked)
+				.Where(x => x.Marked && x.Index != 4)
 				.Foreach (x =>
 			{
 					getChecks(x)
 					.Foreach(d =>
 					{
-						if (x.Type == XOItems [x.Index + d].Type)
+						if ((x.Type == XOItems [x.Index + d].Type))
 							if (((x.Index + d) + d) >= 0 && ((x.Index + d) + d) < XOItems.Count)
 								if (x.Type == XOItems [(x.Index + d) + d].Type)
 										if (WinDetected != null)
@@ -133,11 +136,16 @@ namespace TicTacToeLab.ViewModels
 		{
 			if (LoadedImages != null)
 				LoadedImages(this, EventArgs.Empty);
+
+			if (Resume)
+				loadGameState ();
 		}
 
 		private void NotifyGameEnd(XOType winner)
 		{
 			System.Diagnostics.Debug.WriteLine("End Result: " + winner + " wins.");
+
+			GameEnded = true;
 
 			// disable anymore touches
 			XOItems.Foreach (x => x.Marked = true);
@@ -146,7 +154,21 @@ namespace TicTacToeLab.ViewModels
 				End(this, winner);
 		}
 
+		public void SaveGameState()
+		{
+			if (!GameEnded)
+				App.AppState.SaveAppState (XOItems, PlayerTurn);
+		}
 
+		private async void loadGameState()
+		{
+			PlayerTurn = await App.AppState.LoadAppState (XOItems);
+			setTurn ();
+
+			if (GameLoaded != null)
+				GameLoaded(this, EventArgs.Empty);
+		}
+			
 		public void Init(DetailParameters parameters)
 		{
 			Observable.FromEventPattern<XOType> (this, "WinDetected")
@@ -154,9 +176,15 @@ namespace TicTacToeLab.ViewModels
 				.Subscribe (e => NotifyGameEnd(e.EventArgs));
 
 			App.Storage.Loaded += (sender, e) => NotifyImagesLoaded ();
+			App.AppState.OnPaused += (sender, e) => SaveGameState();
 
 			// init
 			PlayerTurn = parameters.PlayerTurn;
+			Resume = parameters.ResumeGame;
+
+			if (App.Storage.ImagesLoaded && Resume)
+				loadGameState ();
+
 			setTurn ();
 
 			// create nine items

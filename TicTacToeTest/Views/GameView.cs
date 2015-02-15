@@ -1,60 +1,66 @@
-using Cirrious.MvvmCross.Binding.BindingContext;
-using Cirrious.MvvmCross.Touch.Views;
-using Cirrious.MvvmCross.Binding.Touch.Views;
+using Android.App;
+using Android.OS;
+using Android.Content.PM;
+using Android.Locations;
+using Android.Gms.Ads;
 
-using CoreGraphics;
-using Foundation;
-using ObjCRuntime;
-using UIKit;
+using Cirrious.MvvmCross.Droid.Views;
 
 using TicTacToeLab.ViewModels;
+using Android.Views;
+using TicTacToeLab.Droid.Listeners;
+using Cirrious.MvvmCross.Binding.Droid.Views;
 
-namespace TicTacToeLab.iOS.Views
+namespace TicTacToeLab.Droid
 {
-	[Register("GameView")]
-    public class GameView : MvxViewController
-    {
-		private UICollectionView PlayView;
+	[Activity(Label = "GameView", ScreenOrientation = ScreenOrientation.Portrait)]
+	public class GameView : MvxActivity
+	{
+		AdView adView;
 
-        public override void ViewDidLoad()
-        {
-			View.AutoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight;
-			View.BackgroundColor = UIColor.White;
+		public new GameViewModel ViewModel
+		{
+			get { return (GameViewModel)base.ViewModel; }
+			set { base.ViewModel = value; }
+		}
 
-			base.ViewDidLoad();
+		protected override void OnCreate(Bundle bundle)
+		{
+			base.OnCreate(bundle);
 
-			// ios7 layout
-            if (RespondsToSelector(new Selector("edgesForExtendedLayout")))
-               EdgesForExtendedLayout = UIRectEdge.None;
-				
-			PlayView = new UICollectionView(new CGRect(), new TTTLayout()){
-				TranslatesAutoresizingMaskIntoConstraints = false,
-				BackgroundColor = UIColor.Gray
-			};
+			SetContentView(Resource.Layout.GameView);
 
-			var turnLabel = new UILabel () {
-				TranslatesAutoresizingMaskIntoConstraints = false,
-				TextAlignment = UITextAlignment.Center
-			};
-					
-			View.AddSubview (PlayView);
-			View.AddSubview (turnLabel);
+			LoadAd();
+		}
 
-			View.AddConstraints (NSLayoutConstraint.FromVisualFormat ("V:|[PlayView]-20-[turnLabel(==50)]|", NSLayoutFormatOptions.AlignAllCenterX, null, new NSDictionary ("PlayView", PlayView, "turnLabel", turnLabel)));
-			View.AddConstraints (NSLayoutConstraint.FromVisualFormat ("H:|[PlayView]|", NSLayoutFormatOptions.AlignAllCenterY, null, new NSDictionary ("PlayView", PlayView)));
-			View.AddConstraints (NSLayoutConstraint.FromVisualFormat ("H:|[turnLabel]|", NSLayoutFormatOptions.AlignAllCenterY, null, new NSDictionary ("turnLabel", turnLabel)));
+		protected override void OnPause ()
+		{
+			App.AppState.NotifyOnPaused ();
 
-			var source = new CollectionSource (PlayView, XOCell.Key);
+			base.OnPause ();
+		}
 
-			PlayView.RegisterNibForCell(XOCell.Nib, XOCell.Key);
-			PlayView.Source = source;
-			PlayView.ReloadData();
+		protected override void OnResume ()
+		{
+			base.OnResume ();
+		}
 
-			var set = this.CreateBindingSet<GameView, GameViewModel>();
-			set.Bind(turnLabel).For("Text").To(vm => vm.TurnTitle);
-			set.Bind(source).To(vm => vm.XOItems);
-			set.Bind(source).For(s => s.SelectionCommand).To (vm => vm.SelectionCommand); 
-            set.Apply();
-        }
-    }
+		private void LoadAd()
+		{
+			adView = FindViewById<AdView>(Resource.Id.adView);
+
+			var customAdListener = new CustomAdListener();
+			adView.AdListener = customAdListener;
+			adView.SetLayerType(LayerType.Software, null); // required due to an android graphics bug
+
+			var adRequest = new AdRequest.Builder();
+			adRequest.AddTestDevice("47CBFBCF6326163AE1714420FC4C4610");
+			adRequest.AddKeyword("travel");
+			adView.LoadAd(adRequest.Build());
+		}
+
+		public void OnProviderDisabled (string provider) {}
+		public void OnProviderEnabled (string provider) {}
+		public void OnStatusChanged (string provider, Availability status, Bundle extras) {}
+	}
 }

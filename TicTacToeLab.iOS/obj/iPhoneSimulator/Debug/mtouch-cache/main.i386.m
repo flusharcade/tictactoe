@@ -9,6 +9,7 @@ void xamarin_register_modules ()
 void xamarin_register_assemblies ()
 {
 	xamarin_open_and_register ("Xamarin.iOS.dll");
+	xamarin_open_and_register ("GoogleAdMobAds.dll");
 	xamarin_open_and_register ("Cirrious.MvvmCross.Touch.dll");
 	xamarin_open_and_register ("Cirrious.CrossCore.Touch.dll");
 	xamarin_open_and_register ("Cirrious.MvvmCross.Binding.Touch.dll");

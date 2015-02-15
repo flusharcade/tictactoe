@@ -1,6 +1,5 @@
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Touch.Views;
-using Cirrious.MvvmCross.Binding.Touch.Views;
 
 using CoreGraphics;
 using Foundation;
@@ -8,7 +7,9 @@ using ObjCRuntime;
 using UIKit;
 
 using TicTacToeLab.ViewModels;
+
 using MBProgressHUD;
+using System.Threading.Tasks;
 
 namespace TicTacToeLab.iOS.Views
 {
@@ -16,6 +17,8 @@ namespace TicTacToeLab.iOS.Views
     public class GameView : MvxViewController
     {
 		private UICollectionView PlayView;
+		private CollectionSource source;
+
 		private UILabel turnLabel;
 
 		GameViewModel model;
@@ -54,7 +57,7 @@ namespace TicTacToeLab.iOS.Views
 			View.AddConstraints (NSLayoutConstraint.FromVisualFormat ("H:|[PlayView]|", NSLayoutFormatOptions.AlignAllCenterY, null, new NSDictionary ("PlayView", PlayView)));
 			View.AddConstraints (NSLayoutConstraint.FromVisualFormat ("H:|[turnLabel]|", NSLayoutFormatOptions.AlignAllCenterY, null, new NSDictionary ("turnLabel", turnLabel)));
 
-			var source = new CollectionSource (PlayView, XOCell.Key);
+			source = new CollectionSource (PlayView, XOCell.Key);
 			PlayView.RegisterNibForCell(XOCell.Nib, XOCell.Key);
 			PlayView.Source = source;
 			PlayView.ReloadData();
@@ -68,14 +71,30 @@ namespace TicTacToeLab.iOS.Views
 			model = (GameViewModel)this.DataContext;
 			model.LoadedImages += (sender, e) => hud.Hide (animated: true, delay: 0);
 			model.End += HandleGameEnd;
+			model.GameLoaded += HandleGameLoaded;
 
 			if (!App.Storage.ImagesLoaded)
 				hud.Show (animated: true);
         }
 
+        void HandleGameLoaded (object sender, System.EventArgs e)
+        {
+			source.ReloadData ();
+        }
+
+		public override void ViewWillDisappear (bool animated)
+		{
+			this.model.SaveGameState ();
+			base.ViewWillDisappear (animated);
+		}
+
 		protected void HandleGameEnd (object sender, XOType e)
 		{
-			InvokeOnMainThread (() => new UIAlertView ("Tic Tac Toe Lab", e.ToString () + " Wins", null, "OK", null).Show ());
+			InvokeOnMainThread (() => {
+				source.StopAllQuivering ();
+	
+				new UIAlertView ("Tic Tac Toe Lab", e.ToString () + " Wins", null, "OK", null).Show ();
+			});
 		}
     }
 }

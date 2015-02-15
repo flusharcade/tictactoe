@@ -1,15 +1,20 @@
 using Cirrious.CrossCore.Platform;
 using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross.Touch.Platform;
-using UIKit;
 using Cirrious.CrossCore.Converters;
+
+using UIKit;
+
+using TicTacToeLab.Interfaces;
+
+using TicTacToeLabShared.Services;
+using TicTacToeLab.iOS.Converters;
 
 namespace TicTacToeLab.iOS
 {
 	public class Setup : MvxTouchSetup
 	{
-		public Setup(MvxApplicationDelegate applicationDelegate, UIWindow window)
-            : base(applicationDelegate, window)
+		public Setup(MvxApplicationDelegate applicationDelegate, UIWindow window) : base(applicationDelegate, window)
 		{
 		}
 
@@ -21,9 +26,7 @@ namespace TicTacToeLab.iOS
 
 		protected override IMvxApplication CreateApp()
 		{
-			App.Downloader = new FileDownloader ();
-			App.Storage = new ImgStorage ();
-			App.Storage.LoadImgs ();
+			SetupService.Initialise ();
 			
 			return new TicTacToeLab.App();
 		}

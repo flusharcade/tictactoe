@@ -123,9 +123,15 @@
 	-r \
 	../packages/MvvmCross.HotTuna.Plugin.WebBrowser.3.5.0/lib/Xamarin.iOS10/Cirrious.MvvmCross.Plugins.WebBrowser.Touch.dll \
 	-r \
-	../packages/MvvmCross.HotTuna.Plugin.All.3.5.0/lib/Xamarin.iOS10/Cirrious.MvvmCross.Plugins.All.dll \
-	-r \
 	../Components/mbprogresshud-0.9.0.1/lib/ios-unified/MBProgressHUD.dll \
+	-r \
+	../packages/Xamarin.Forms.1.3.3.6323/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll \
+	-r \
+	../packages/Xamarin.Forms.1.3.3.6323/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
+	-r \
+	../packages/Xamarin.Forms.1.3.3.6323/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
+	-r \
+	../Components/googleadmob-6.12.2.1/lib/ios-unified/GoogleAdMobAds.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
@@ -319,9 +325,15 @@
 	-r \
 	../packages/MvvmCross.HotTuna.Plugin.WebBrowser.3.5.0/lib/Xamarin.iOS10/Cirrious.MvvmCross.Plugins.WebBrowser.Touch.dll \
 	-r \
-	../packages/MvvmCross.HotTuna.Plugin.All.3.5.0/lib/Xamarin.iOS10/Cirrious.MvvmCross.Plugins.All.dll \
-	-r \
 	../Components/mbprogresshud-0.9.0.1/lib/ios-unified/MBProgressHUD.dll \
+	-r \
+	../packages/Xamarin.Forms.1.3.3.6323/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll \
+	-r \
+	../packages/Xamarin.Forms.1.3.3.6323/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
+	-r \
+	../packages/Xamarin.Forms.1.3.3.6323/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
+	-r \
+	../Components/googleadmob-6.12.2.1/lib/ios-unified/GoogleAdMobAds.dll \
 	-r \
 	/Users/mww121/Projects/TicTacToeLab/TicTacToeLab/bin/Debug//TicTacToeLab.dll \
 	/Users/mww121/Projects/TicTacToeLab/TicTacToeLab.iOS/bin/iPhoneSimulator/Debug//TicTacToeLab.iOS.exe \
