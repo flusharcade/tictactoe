@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>TicTacToeLab.iOS</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.dns.testing</string>
+	<string>com.flusharcade.testing</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>

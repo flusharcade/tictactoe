@@ -1,14 +1,19 @@
 ﻿<Properties StartupItem="TicTacToeLab.iOS/TicTacToeLab.iOS.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.0123456789ABCDEF" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TicTacToeTest/Static/BitmapFunctions.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TicTacToeLab.iOS/Views/GameView.cs">
     <Files>
-      <File FileName="TicTacToeTest/Static/BitmapFunctions.cs" Line="1" Column="1" />
-      <File FileName="TicTacToeTest/Converters/ByteToBitmapConverter.cs" Line="26" Column="26" />
+      <File FileName="TicTacToeLab.iOS/Bootstrap/AccelerometerPluginBootstrap.cs" Line="1" Column="1" />
+      <File FileName="TicTacToeLab.iOS/Views/GameView.cs" Line="71" Column="44" />
+      <File FileName="TicTacToeLab.iOS/AppDelegate.cs" Line="40" Column="25" />
+      <File FileName="TicTacToeLab.iOS/Setup.cs" Line="33" Column="3" />
+      <File FileName="TicTacToeShared/Services/SetupService.cs" Line="1" Column="1" />
+      <File FileName="TicTacToeLab/App.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.TicTacToeLab.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4D94D0EF-12F5-45B6-83B6-58F50C2938C0" />
+  <MonoDevelop.Ide.ItemProperties.TicTacToeLab.Droid MonoForAntroid.PreferredDevice="Nexus 4" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.TicTacToeLab.Droid MonoForAntroid.PreferredDevice="Nexus 4" />
 </Properties>
